@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>吊炸天 斗地主</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body onselectstart="return false">
+	<div class="fenshu">
+		<div class="bao">
+			<a class="cxks">重新开始</a>
+			<i>|</i>
+			<span>Adminustrator的分数: </span>
+			<span>0</span>
+		</div>
+		</div>
+	<div class="jm">
+		<div class="zhuozi2">
+			<ul class="paix"></ul>
+			<ul class="paiz"></ul>
+			<ul class="pais"></ul>
+			<ul class="paiy"></ul>
+		</div>
+		<ul class="zhuozi">
+		</ul>
+		<div class="haokan"><div class="shang"></div></div>
+		<div class="xia"></div>
+		<div class="dingz"><div class="zuo"></div></div>
+		<div class="dingy"><div class="you"></div></div>
+	</div>
+	<div class="daping">
+		<div class="tou"><div class="guanbi">X</div></div>
+		<div class="zhong">请在大屏下好好玩，别捣乱！</div>
+	</div>
+	<div class="kaishiba">
+		<a>游戏说明：</a>
+		<a>鼠标单击选牌</a>
+		<a>鼠标双击出牌</a>
+		<a>大小顺序：K>Q>J>10>9>8>7>6>5>4>3>2>A</a>
+		<span>开始游戏</span>
+	</div>
+	<div class="defen">
+		<div class="df">您的分数为：<span>0</span></div>
+		<input class="zlyj" type="button" name="" id=""value="再来一句">
+	</div>
+	<script src="./jquery-1.12.0.js"></script>
+	<script>
+
+
+  $(document).on('contextmenu',false)
+   var yifupukepai = [];
+   var dict = {}
+   while( yifupukepai.length !== 52){
+     var colors = ['hongtao','meihua','heitao','fangkuai']
+     var h = colors[Math.floor(Math.random()*4)];
+     var s = Math.floor(Math.random()*13)+1;
+     var pai = {huase:h,shuzi:s};
+     if( !dict[ h+s ]){
+       dict[ h+s ] = true;
+       yifupukepai.push(pai)
+     }
+   }                         //整个都是同步队列中执行
+
+$('.guanbi').on('click',function(){
+	$('.daping').hide()
+	// $('.jm').css('height','100%')
+	document.documentElement.webkitRequestFullScreen();
+	document.documentElement.requestFullscreen();
+	document.documentElement.mozRequestFullScreen();
+	document.documentElement.msRequestFullscreen();
+})
+$('.cxks').on('click',function(){
+	location.reload()
+})
+$('.zlyj').on('click',function(){
+	location.reload()
+	$(this).parent().hide()
+})
+$(document).ready($('.daping1').show())
+  var paishu = {1:'one0',2:'one1',3:'one2',4:'one3',5:'one4',6:'one5',7:'one6',8:'one7',9:'one8',10:'one9',11:'one10',12:'one11',13:'one12'}
+     var fangpai = function (){
+      $(yifupukepai).each (function (i,v){
+        $('<li>')
+        .addClass('pai ' + yifupukepai[i].huase)
+        .addClass(function(){
+            return 'pai ' +  paishu[yifupukepai[i].shuzi]
+          })
+        .text(paishu[yifupukepai[i].shuzi])
+        .appendTo(zhuozi)
+        .delay(10*i)
+        .animate({opacity:1},400)
+        .queue(function(){
+          if(i===yifupukepai.length-1){
+              $('.kaishiba').on('click','span',function(){
+								$(this).parent().hide()
+								fapai()
+							})
+          }
+          $(this).dequeue();
+         })
+      })
+    }
+  var zhuozi = $('.zhuozi')
+     zhuozi
+    .queue(fangpai)
+		.children().css('background','url(./images/pkpbm.png) no-repeat center center','background', 'cover')
+
+ var shang = $('.shang')
+  var left = $('.zuo')
+  var right = $('.you')
+  var bottom = $('.xia')
+   var  fapai = function(){
+      zhuozi.children().each(function(i,v){
+           var target,off
+           if( i % 4 == 0 ){
+            target = left
+            off = {opacity:1,left:'-=600'}
+          }else if( i % 4 == 1 ){
+						$(this).removeAttr('style')
+             target = bottom
+            off = {opacity:1,top:'+=400'}
+          }else if( i % 4 == 2 ){
+             target = right
+            off = {opacity:1,right:'-=600'}
+          }else if(i % 4 == 3){
+						target = shang
+					 off = {opacity:1,bottom:'+=400'}
+					}
+          $(this)
+          .delay(i*100)
+          .animate(off,500)
+          .queue(function(){
+            $(this)
+            .appendTo(target)
+            .css('opacity',1)
+            .dequeue()
+						if($('.zhuozi li').length===0){
+							chupai()
+						}
+						// var xjh = [];
+						// $('.xia li').each(function(i,v){
+						// 	var xjhj = $(v).text().substring(3,5)
+						// 	xjh.push(parseInt(xjhj))
+						// 	xjh.sort()
+						// 								console.log(xjh)
+						// })
+          })
+      })
+    }
+		var chupai = function(){
+			var num = 0;
+			var x= 0;
+		 bottom.on('click','li',function(){
+			 $(this).toggleClass('bianda')
+		 })
+ 		 bottom.on('dblclick','li',function(){
+			 $('.zhuozi2').children().empty()
+			 var sz = [];
+			 $(this).removeClass('bianda')
+ 		 if($('.paix').has('li').length){
+ 			 return;
+ 		 }else{
+ 				 $(this)
+ 				 .appendTo($('.paix'))
+ 				 var xx=($('.paix li').text())
+ 				sz.push(parseInt(xx.substring(3,5)))
+ 				 $('.zuo').children().removeAttr('style').first().appendTo('.paiz')
+ 				 var xx=($('.paiz li').text())
+ 				 sz.push(parseInt(xx.substring(3,5)))
+ 					 $('.you').children().removeAttr('style').first().appendTo('.paiy')
+ 					 var xx=($('.paiy li').text())
+ 					sz.push(parseInt(xx.substring(3,5)))
+ 						 $('.shang').children().removeAttr('style').first().appendTo('.pais')
+ 						 var xx=($('.pais li').text())
+ 						sz.push(parseInt(xx.substring(3,5)))
+							 var zd = Math.max.apply(null,sz)
+							//  console.log(zd)
+							x++;
+							if(x===13){
+								$('.defen').show()
+								$('.df span').text(num)
+							}
+							 }
+							 if(sz[0]===zd){
+							num+=10;
+							$('.fenshu span').last().text(num)
+							 }else if(sz[1]===zd){
+							}else if(sz[2]===zd){
+							}else if(sz[2]===zd){
+							}
+     })
+ 	 }
+
+
+
+
+
+
+	</script>
+</body>
+</html>

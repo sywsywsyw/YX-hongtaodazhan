@@ -1,0 +1,475 @@
+@charset "UTF-8";
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-family: '微软雅黑'; }
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.jm {
+  width: 100%;
+  min-height: 580px;
+  position: relative;
+  background: url(./images/bj.png) no-repeat center center;
+  background: cover;
+  position: relative; }
+
+.zhuozi {
+  width: 300px;
+  margin: auto;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.shang {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 500px;
+  margin: auto;
+  height: 110px; }
+
+.xia {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  margin: auto;
+  height: 110px; }
+
+.xia li {
+  margin-right: -8%; }
+
+.jm .haokan .shang li {
+  margin-right: -8%;
+  width: 78px;
+  height: 110px;
+  float: left;
+  /*transform:rotateZ(90deg);*/
+  background: url(./images/pkpbm.png) no-repeat center center;
+  background: cover; }
+
+.jm .dingz .zuo li {
+  width: 78px;
+  height: 110px;
+  float: left;
+  /*transform:rotateZ(90deg);*/
+  margin-top: -92%;
+  background: url(./images/pkpbm.png) no-repeat center center;
+  background: cover; }
+
+.dingz {
+  vertical-align: middle;
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  top: 0;
+  width: 80px;
+  margin: auto;
+  padding-top: 100px;
+  line-height: 100%; }
+
+.dingy {
+  vertical-align: middle;
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  top: 0;
+  width: 80px;
+  margin: auto;
+  padding-top: 100px;
+  line-height: 100%; }
+
+.jm .dingy .you li {
+  width: 78px;
+  height: 110px;
+  float: left;
+  /*transform:rotateZ(90deg);*/
+  margin-top: -93%;
+  background: url(./images/pkpbm.png) no-repeat center center;
+  background: cover; }
+
+.bmm {
+  background: url(./images/pkpbm.png) no-repeat center center;
+  background: cover; }
+
+.pai {
+  float: left;
+  width: 78px;
+  text-align: center;
+  line-height: 110px;
+  font-size: 0.000000001px;
+  height: 110px; }
+
+.zhuozi .pai {
+  float: left;
+  width: 78px;
+  height: 110px;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0; }
+
+.paimian {
+  float: left;
+  width: 78px;
+  height: 110px; }
+
+.zhuozi2 {
+  width: 300px;
+  margin: auto;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.zhuozi2 .paix {
+  float: left;
+  width: 78px;
+  height: 110px;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  top: 30%;
+  right: 0;
+  left: 0; }
+
+.bianda {
+  margin-top: -30px; }
+
+.zhuozi2 .pais {
+  float: left;
+  width: 78px;
+  height: 110px;
+  position: absolute;
+  margin: auto;
+  bottom: 30%;
+  top: 10%;
+  right: 0;
+  left: 0; }
+
+.zhuozi2 .paiy {
+  float: left;
+  width: 78px;
+  height: 110px;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  top: 10%;
+  right: 0;
+  left: 40%; }
+
+.zhuozi2 .paiz {
+  float: left;
+  width: 78px;
+  height: 110px;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  top: 10%;
+  right: 40%;
+  left: 0; }
+
+.fenshu {
+  position: relative;
+  margin: auto;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  left: 0;
+  color: white;
+  background: url(./images/bj.png) no-repeat center center;
+  text-align: right; }
+  .fenshu .bao {
+    margin: 0 auto;
+    width: 1000px;
+    height: 40px;
+    line-height: 40px;
+    left: 0; }
+  .fenshu .cxks {
+    float: left;
+    cursor: pointer; }
+  .fenshu i {
+    font-style: normal; }
+  .fenshu span {
+    font-size: 12px;
+    font-family: '微软雅黑';
+    cursor: pointer; }
+
+.daping {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  background: white;
+  box-shadow: 0  0  20px #ccc;
+  cursor: pointer; }
+  .daping .tou {
+    float: right;
+    width: 300px;
+    height: 20px;
+    background: rgba(65, 79, 87, 0.07); }
+    .daping .tou .guanbi {
+      width: 40px;
+      height: 20px;
+      float: right;
+      cursor: pointer; }
+  .daping .zhong {
+    float: left;
+    width: 300px;
+    line-height: 180px;
+    height: 180px;
+    text-align: center; }
+
+@media screen and (max-width: 800px) {
+  .daping {
+    display: block; } }
+
+.kaishiba {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  line-height: 30px;
+  text-align: center;
+  box-shadow: 0  0  20px #ccc;
+  cursor: pointer;
+  color: white;
+  background: #1b8733; }
+  .kaishiba a {
+    display: block; }
+  .kaishiba span {
+    width: 50px;
+    height: 50px;
+    font-size: 30px; }
+
+.defen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  color: white;
+  background: #1b8733;
+  box-shadow: 0  0  20px #ccc;
+  cursor: pointer; }
+  .defen .df {
+    height: 150px;
+    line-height: 150px;
+    text-align: center; }
+  .defen .zlyj {
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: right;
+    margin-right: 30px;
+    color: white;
+    display: inline-block;
+    background: #2a9e32; }
+
+.pai.fangkuai.one0 {
+  background: url(./images/pukepai.jpg) no-repeat 0px 0px; }
+
+.pai.fangkuai.one1 {
+  background: url(./images/pukepai.jpg) no-repeat -79px 0px; }
+
+.pai.fangkuai.one2 {
+  background: url(./images/pukepai.jpg) no-repeat -158px 0px; }
+
+.pai.fangkuai.one3 {
+  background: url(./images/pukepai.jpg) no-repeat -237px 0px; }
+
+.pai.fangkuai.one4 {
+  background: url(./images/pukepai.jpg) no-repeat -316px 0px; }
+
+.pai.fangkuai.one5 {
+  background: url(./images/pukepai.jpg) no-repeat -395px 0px; }
+
+.pai.fangkuai.one6 {
+  background: url(./images/pukepai.jpg) no-repeat -474px 0px; }
+
+.pai.fangkuai.one7 {
+  background: url(./images/pukepai.jpg) no-repeat -553px 0px; }
+
+.pai.fangkuai.one8 {
+  background: url(./images/pukepai.jpg) no-repeat -632px 0px; }
+
+.pai.fangkuai.one9 {
+  background: url(./images/pukepai.jpg) no-repeat -711px 0px; }
+
+.pai.fangkuai.one10 {
+  background: url(./images/pukepai.jpg) no-repeat -790px 0px; }
+
+.pai.fangkuai.one11 {
+  background: url(./images/pukepai.jpg) no-repeat -869px 0px; }
+
+.pai.fangkuai.one12 {
+  background: url(./images/pukepai.jpg) no-repeat -948px 0px; }
+
+.pai.fangkuai.one13 {
+  background: url(./images/pukepai.jpg) no-repeat -1027px 0px; }
+
+.pai.hongtao.one0 {
+  background: url(./images/pukepai.jpg) no-repeat 0px -110px; }
+
+.pai.hongtao.one1 {
+  background: url(./images/pukepai.jpg) no-repeat -79px -110px; }
+
+.pai.hongtao.one2 {
+  background: url(./images/pukepai.jpg) no-repeat -158px -110px; }
+
+.pai.hongtao.one3 {
+  background: url(./images/pukepai.jpg) no-repeat -237px -110px; }
+
+.pai.hongtao.one4 {
+  background: url(./images/pukepai.jpg) no-repeat -316px -110px; }
+
+.pai.hongtao.one5 {
+  background: url(./images/pukepai.jpg) no-repeat -395px -110px; }
+
+.pai.hongtao.one6 {
+  background: url(./images/pukepai.jpg) no-repeat -474px -110px; }
+
+.pai.hongtao.one7 {
+  background: url(./images/pukepai.jpg) no-repeat -553px -110px; }
+
+.pai.hongtao.one8 {
+  background: url(./images/pukepai.jpg) no-repeat -632px -110px; }
+
+.pai.hongtao.one9 {
+  background: url(./images/pukepai.jpg) no-repeat -711px -110px; }
+
+.pai.hongtao.one10 {
+  background: url(./images/pukepai.jpg) no-repeat -790px -110px; }
+
+.pai.hongtao.one11 {
+  background: url(./images/pukepai.jpg) no-repeat -869px -110px; }
+
+.pai.hongtao.one12 {
+  background: url(./images/pukepai.jpg) no-repeat -948px -110px; }
+
+.pai.hongtao.one13 {
+  background: url(./images/pukepai.jpg) no-repeat -1027px -110px; }
+
+.pai.heitao.one0 {
+  background: url(./images/pukepai.jpg) no-repeat 0px -220px; }
+
+.pai.heitao.one1 {
+  background: url(./images/pukepai.jpg) no-repeat -79px -220px; }
+
+.pai.heitao.one2 {
+  background: url(./images/pukepai.jpg) no-repeat -158px -220px; }
+
+.pai.heitao.one3 {
+  background: url(./images/pukepai.jpg) no-repeat -237px -220px; }
+
+.pai.heitao.one4 {
+  background: url(./images/pukepai.jpg) no-repeat -316px -220px; }
+
+.pai.heitao.one5 {
+  background: url(./images/pukepai.jpg) no-repeat -395px -220px; }
+
+.pai.heitao.one6 {
+  background: url(./images/pukepai.jpg) no-repeat -474px -220px; }
+
+.pai.heitao.one7 {
+  background: url(./images/pukepai.jpg) no-repeat -553px -220px; }
+
+.pai.heitao.one8 {
+  background: url(./images/pukepai.jpg) no-repeat -632px -220px; }
+
+.pai.heitao.one9 {
+  background: url(./images/pukepai.jpg) no-repeat -711px -220px; }
+
+.pai.heitao.one10 {
+  background: url(./images/pukepai.jpg) no-repeat -790px -220px; }
+
+.pai.heitao.one11 {
+  background: url(./images/pukepai.jpg) no-repeat -869px -220px; }
+
+.pai.heitao.one12 {
+  background: url(./images/pukepai.jpg) no-repeat -948px -220px; }
+
+.pai.heitao.one13 {
+  background: url(./images/pukepai.jpg) no-repeat -1027px -220px; }
+
+.pai.meihua.one0 {
+  background: url(./images/pukepai.jpg) no-repeat 0px -330px; }
+
+.pai.meihua.one1 {
+  background: url(./images/pukepai.jpg) no-repeat -79px -330px; }
+
+.pai.meihua.one2 {
+  background: url(./images/pukepai.jpg) no-repeat -158px -330px; }
+
+.pai.meihua.one3 {
+  background: url(./images/pukepai.jpg) no-repeat -237px -330px; }
+
+.pai.meihua.one4 {
+  background: url(./images/pukepai.jpg) no-repeat -316px -330px; }
+
+.pai.meihua.one5 {
+  background: url(./images/pukepai.jpg) no-repeat -395px -330px; }
+
+.pai.meihua.one6 {
+  background: url(./images/pukepai.jpg) no-repeat -474px -330px; }
+
+.pai.meihua.one7 {
+  background: url(./images/pukepai.jpg) no-repeat -553px -330px; }
+
+.pai.meihua.one8 {
+  background: url(./images/pukepai.jpg) no-repeat -632px -330px; }
+
+.pai.meihua.one9 {
+  background: url(./images/pukepai.jpg) no-repeat -711px -330px; }
+
+.pai.meihua.one10 {
+  background: url(./images/pukepai.jpg) no-repeat -790px -330px; }
+
+.pai.meihua.one11 {
+  background: url(./images/pukepai.jpg) no-repeat -869px -330px; }
+
+.pai.meihua.one12 {
+  background: url(./images/pukepai.jpg) no-repeat -948px -330px; }
+
+.pai.meihua.one13 {
+  background: url(./images/pukepai.jpg) no-repeat -1027px -330px; }
+
+.xia li:hover {
+  box-shadow: 0 0 10px white; }
+
+.shang li:hover {
+  box-shadow: 0 0 10px white; }
+
+.zuo li:hover {
+  box-shadow: 0 0 10px white; }
+
+.you li:hover {
+  box-shadow: 0 0 10px white; }
